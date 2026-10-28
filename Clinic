@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>क्लिनिक स्पेशल ऑफ़र और पैकेज</title>
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --bg-color: #f0f9ff;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --accent: #10b981;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #e0f2fe;
+            padding-bottom: 5px;
+        }
+        .offer-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.2s;
+        }
+        .offer-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.1);
+        }
+        .offer-info h3 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+            color: #1e293b;
+        }
+        .prices {
+            font-size: 14px;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #94a3b8;
+            margin-right: 8px;
+        }
+        .discounted-price {
+            font-weight: bold;
+            color: var(--accent);
+            font-size: 16px;
+        }
+        .badge {
+            background: #fee2e2;
+            color: #dc2626;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        .select-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .select-btn:hover {
+            background: var(--primary-dark);
+        }
+        .summary-box {
+            margin-top: 25px;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .summary-box h3 {
+            margin-top: 0;
+            color: #166534;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🏥 मेरे क्लिनिक के विशेष ऑफ़र</h1>
+        <div class="subtitle">अपनी ज़रूरत का ट्रीटमेंट या मेडिसिन पैकेज चुनें और भारी छूट पाएँ!</div>
+
+        <div class="section-title">💊 मेडिसिन ऑफ़र</div>
+        <div class="offer-card">
+            <div class="offer-info">
+                <h3>मासिक जनरल मेडिसिन किट</h3>
+                <div class="prices">
+                    <span class="original-price">₹2000</span>
+                    <span class="discounted-price">₹1000</span>
+                    <span class="badge">50% छूट</span>
+                </div>
+            </div>
+            <button class="select-btn" onclick="selectOffer('मासिक जनरल मेडिसिन किट', 1000)">चुनें</button>
+        </div>
+
+        <div class="offer-card">
+            <div class="offer-info">
+                <h3>इम्यूनिटी बूस्टर सिरप किट</h3>
+                <div class="prices">
+                    <span class="original-price">₹1000</span>
+                    <span class="discounted-price">₹700</span>
+                    <span class="badge">30% छूट</span>
+                </div>
+            </div>
+            <button class="select-btn" onclick="selectOffer('इम्यूनिटी बूस्टर सिरप किट', 700)">चुनें</button>
+        </div>
+
+        <div class="section-title">🩺 ट्रीटमेंट पैकेज</div>
+        <div class="offer-card">
+            <div class="offer-info">
+                <h3>पूर्ण स्वास्थ्य जांच (Full Body Checkup)</h3>
+                <div class="prices">
+                    <span class="original-price">₹5000</span>
+                    <span class="discounted-price">₹2500</span>
+                    <span class="badge">50% छूट</span>
+                </div>
+            </div>
+            <button class="select-btn" onclick="selectOffer('पूर्ण स्वास्थ्य जांच (Full Body Checkup)', 2500)">चुनें</button>
+        </div>
+
+        <div class="offer-card">
+            <div class="offer-info">
+                <h3>मधुमेह (Diabetes) केयर पैकेज</h3>
+                <div class="prices">
+                    <span class="original-price">₹3000</span>
+                    <span class="discounted-price">₹2100</span>
+                    <span class="badge">30% छूट</span>
+                </div>
+            </div>
+            <button class="select-btn" onclick="selectOffer('मधुमेह (Diabetes) केयर पैकेज', 2100)">चुनें</button>
+        </div>
+
+        <div class="summary-box">
+            <h3>चयनित ऑफ़र रसीद</h3>
+            <p id="selected-item">कोई ऑफ़र नहीं चुना गया है। ऊपर दिए गए बटन से चयन करें।</p>
+        </div>
+    </div>
+
+    <script>
+        function selectOffer(offerName, price) {
+            document.getElementById('selected-item').innerHTML = 
+                `चुना गया पैकेज: <b>${offerName}</b><br>देय राशि (ऑफ़र मूल्य): <b style="color: #166534; font-size: 18px;">₹${price}</b>`;
+        }
+    </script>
+
+</body>
+</html>
